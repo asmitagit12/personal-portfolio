@@ -5,7 +5,46 @@ import myImg from '../assets/profile-img.jpeg'
 const CoverPage = () => {
     return (
         <>
-            <Grid container>
+        <div className="grid grid-cols-12">
+    <div className="col-span-4 bg-[#F2D2BD] h-screen"></div>
+    <div className="col-span-8 bg-white h-screen flex items-center">
+        <div className="w-[400px] ml-[120px]">
+            <div className="flex items-center space-x-2">
+                <h5>Hey I'm</h5>
+                <p className="text-2xl font-semibold">Asmita Patil</p>
+            </div>
+            <p className="mb-[30px] text-base">FRONTEND DEVELOPER & WEB DEVELOPER</p>
+            <div className="flex gap-5 mb-[30px]">
+                <button className="bg-primary text-white px-4 py-2 rounded">RESUME</button>
+                <button className="border px-4 py-2 rounded">PROJECTS</button>
+            </div>
+            <p className="mb-[20px]">
+                Hello! I'm Asmita Patil, a passionate and detail-oriented frontend developer, I specialize in creating beautiful, responsive, and user-friendly web applications. With a strong foundation in HTML, CSS, and JavaScript, and expertise in modern frameworks like React, I strive to bring innovative and efficient solutions to life.
+            </p>
+            <p>
+                My goal is to deliver seamless user experiences while maintaining clean and maintainable code.
+            </p>
+        </div>
+    </div>
+</div>
+<div className="absolute top-[15%] left-[15%] right-[15%] w-[20%] bg-white p-[40px] rounded-[10px] shadow-lg text-center z-10">
+    <div className="flex flex-col items-center space-y-2">
+        <div className="rounded-full overflow-hidden">
+            <img src={myImg} alt="Profile" className="h-[200px] w-[200px] rounded-full" />
+        </div>
+        <h5>Asmita Patil</h5>
+        <div className="w-[70px] h-[1px] bg-red-500"></div>
+        <p className="mb-[40px]">FRONTEND DEVELOPER</p>
+    </div>
+    <div className="flex justify-center gap-2 mt-[30px]">
+        <a href="https://facebook.com" target="_blank" className="text-blue-600">FB</a>
+        <a href="https://twitter.com" target="_blank" className="text-blue-400">TW</a>
+        <a href="https://linkedin.com" target="_blank" className="text-blue-700">LI</a>
+        <a href="https://instagram.com" target="_blank" className="text-pink-500">IG</a>
+    </div>
+</div>
+
+            {/* <Grid container>
                 <Grid item lg={4}>
                     <Box sx={{ backgroundColor: '#F2D2BD', height: '100vh' }}></Box>
                 </Grid>
@@ -71,7 +110,7 @@ const CoverPage = () => {
                     <Button href="https://linkedin.com" target="_blank">LI</Button>
                     <Button href="https://instagram.com" target="_blank">IG</Button>
                 </Box>
-            </Box>
+            </Box> */}
             {/* <Box sx={{ position: 'absolute', top: '30%', left: '45%', transform: 'translateX(-50%)', zIndex: 0 }}>
                 <Typography variant="h2" component="div">
                     Hello
