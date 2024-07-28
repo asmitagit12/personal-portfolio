@@ -32,10 +32,10 @@ const Footer = () => {
             <h2 className="text-xl font-bold mb-2">Contact</h2>
             <ul>
               <li className="mb-2">
-                <a href="mailto:youremail@example.com" className="text-gray-400 hover:text-white">youremail@example.com</a>
+                <a href="mailto:youremail@example.com" className="text-gray-400 hover:text-white">asmitapatil9904@gmail.com</a>
               </li>
               <li className="mb-2">
-                <a href="tel:+1234567890" className="text-gray-400 hover:text-white">+1234567890</a>
+                <a href="tel:+1234567890" className="text-gray-400 hover:text-white">+91 9823400414</a>
               </li>
             </ul>
             <div className="flex space-x-4 mt-4">
@@ -52,7 +52,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 text-center text-gray-400">
-          &copy; {new Date().getFullYear()} Your Name. All rights reserved.
+          &copy; {new Date().getFullYear()} asmita patil. All rights reserved.
         </div>
       </div>
     </footer>

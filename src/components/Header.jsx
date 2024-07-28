@@ -1,142 +1,111 @@
-import React, { useState, useEffect } from 'react'
-import { Link, Outlet, useLocation } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 
-const drawerWidth = 190
+const drawerWidth = 190;
 
 const Pages = [
   {
     id: 'home',
     name: 'Home',
-    path: '/',
+    path: '#home',
     submenu: []
   },
   {
     id: 'aboutus',
-    name: 'About us',
-    path: '/aboutUs',
+    name: 'About',
+    path: '#about',
     submenu: []
   },
   {
-    id: 'services',
-    name: 'Services',
-    path: '/services',
-    submenu: [
-      {
-        name: 'Web Development',
-        path: ''
-      },
-      {
-        name: 'Web Application Development',
-        path: 'web-app-dev'
-      },
-      {
-        name: 'ERP Solutions',
-        path: 'erp-solution'
-      },
-      {
-        name: 'E-Commerce Solutions',
-        path: 'e-commerce'
-      },
-      {
-        name: 'Algo Trading Solutions',
-        path: 'algo-trade'
-      },
-      {
-        name: 'Mobile App Development',
-        path: 'mobile-app'
-      }
-    ]
+    id: 'projects',
+    name: 'Projects',
+    path: '#projects',
+    submenu: []
   },
   {
     id: 'portfolio',
     name: 'Portfolio',
-    path: '/portfolio',
-    submenu: []
-  },
-  {
-    id: 'technologies',
-    name: 'Technologies',
-    path: '/technologies',
+    path: '#portfolio',
     submenu: []
   },
   {
     id: 'contactUs',
     name: 'Contact us',
-    path: '/contactus',
+    path: '#contactus',
     submenu: []
   }
-]
+];
 
 const Header = () => {
-  const [open, setOpen] = useState(false)
-  const location = useLocation()
-  const [highlightedItem, setHighlightedItem] = useState(null)
-  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false)
-  const [anchorEl, setAnchorEl] = useState(null)
-  const [expanded, setExpanded] = useState(false)
-  const [subMenuOpen, setSubMenuOpen] = useState(Pages.map(() => false))
+  const [open, setOpen] = useState(false);
+  const location = useLocation();
+  const [highlightedItem, setHighlightedItem] = useState(null);
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [expanded, setExpanded] = useState(false);
+  const [subMenuOpen, setSubMenuOpen] = useState(Pages.map(() => false));
 
   const handleExpandClick = () => {
-    setExpanded(prev => !prev)
-  }
+    setExpanded(prev => !prev);
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            const id = entry.target.getAttribute('id')
-            setHighlightedItem(id)
+            const id = entry.target.getAttribute('id');
+            setHighlightedItem(id);
           }
-        })
+        });
       },
       { rootMargin: '-100px 0px -50% 0px' }
-    )
+    );
 
     Pages.forEach(page => {
-      const section = document.getElementById(page.id)
+      const section = document.getElementById(page.id);
       if (section) {
-        observer.observe(section)
+        observer.observe(section);
       }
-    })
+    });
 
     return () => {
-      observer.disconnect()
-    }
-  }, [])
+      observer.disconnect();
+    };
+  }, []);
 
   const handleDrawerClose = () => {
-    setOpen(prev => !prev)
-  }
+    setOpen(prev => !prev);
+  };
 
   const handleSubMenuOpen = event => {
-    setAnchorEl(event.currentTarget)
-    setIsSubMenuOpen(true)
-  }
+    setAnchorEl(event.currentTarget);
+    setIsSubMenuOpen(true);
+  };
 
   const handleSubMenuClose = () => {
-    setIsSubMenuOpen(false)
-  }
+    setIsSubMenuOpen(false);
+  };
 
   const handleToggleSubmenu = index => {
     const newSubmeuOpen = subMenuOpen.map((isOpen, i) => {
       if (i === index) {
-        return !isOpen
+        return !isOpen;
       }
-      return false
-    })
-    setSubMenuOpen(newSubmeuOpen)
-  }
+      return false;
+    });
+    setSubMenuOpen(newSubmeuOpen);
+  };
 
   useEffect(() => {
-    setIsSubMenuOpen(false)
-    setAnchorEl(null)
-  }, [location.pathname])
+    setIsSubMenuOpen(false);
+    setAnchorEl(null);
+  }, [location.pathname]);
 
   return (
     <>
       <div className="fixed w-full bg-[#141414] z-20 h-14 flex items-center justify-between px-4">
-        <h1 className="text-white font-bold text-2xl">AP</h1>
+        <h1 className="text-white font-bold text-2xl">Asmita Patil</h1>
         <div className="md:hidden">
           <button onClick={handleDrawerClose} className="text-white">
             {open ? 'Close' : 'Menu'}
@@ -147,7 +116,7 @@ const Header = () => {
             <div key={index} className="relative group">
               <Link
                 to={data.path}
-                className={`text-lg font-medium ${
+                className={`text-md font-medium ml-2 ${
                   highlightedItem === data.id ? 'text-white' : 'text-gray-400'
                 }`}
                 onMouseEnter={data.id === 'services' ? handleSubMenuOpen : null}
@@ -216,7 +185,7 @@ const Header = () => {
         </div>
       )}
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
