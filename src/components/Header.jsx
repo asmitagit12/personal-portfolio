@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link, Outlet, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const drawerWidth = 190;
 
@@ -7,31 +9,31 @@ const Pages = [
   {
     id: 'home',
     name: 'Home',
-    path: '#home',
+    path: '/',
     submenu: []
   },
   {
     id: 'aboutus',
     name: 'About',
-    path: '#about',
+    path: '/about',
     submenu: []
   },
   {
     id: 'projects',
     name: 'Projects',
-    path: '#projects',
+    path: '/projects',
     submenu: []
   },
   {
-    id: 'portfolio',
-    name: 'Portfolio',
-    path: '#portfolio',
+    id: 'experience',
+    name: 'Experience',
+    path: '/experience',
     submenu: []
   },
   {
-    id: 'contactUs',
-    name: 'Contact us',
-    path: '#contactus',
+    id: 'contact',
+    name: 'Contact Me',
+    path: '/contact',
     submenu: []
   }
 ];
@@ -108,7 +110,7 @@ const Header = () => {
         <h1 className="text-white font-bold text-2xl">Asmita Patil</h1>
         <div className="md:hidden">
           <button onClick={handleDrawerClose} className="text-white">
-            {open ? 'Close' : 'Menu'}
+            {open ? <FontAwesomeIcon icon={faTimes} size="lg" /> : <FontAwesomeIcon icon={faBars} size="lg" />}
           </button>
         </div>
         <div className="hidden md:flex space-x-4">
@@ -123,19 +125,6 @@ const Header = () => {
               >
                 {data.name}
               </Link>
-              {/* {data.submenu.length > 0 && (
-                <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg hidden group-hover:block">
-                  {data.submenu.map((subItem, subIndex) => (
-                    <Link
-                      key={subIndex}
-                      to={`${data.path}/${subItem.path}`}
-                      className="block px-4 py-2 text-white-700 hover:bg-gray-200"
-                    >
-                      {subItem.name}
-                    </Link>
-                  ))}
-                </div>
-              )} */}
             </div>
           ))}
         </div>
@@ -143,12 +132,14 @@ const Header = () => {
       {open && (
         <div className="md:hidden fixed inset-0 z-30 bg-gray-800 bg-opacity-75">
           <div
-            className="fixed top-0 right-0 h-full w-64 bg-white shadow-lg"
+            className="fixed top-0 left-0 h-full w-64 bg-white shadow-lg"
             style={{ width: drawerWidth }}
           >
             <div className="flex items-center justify-between px-4 py-2">
-              <h2 className="text-lg font-bold text-navy">Suyotech</h2>
-              <button onClick={handleDrawerClose}>Close</button>
+              <h2 className="text-lg font-bold text-navy">Asmita Patil</h2>
+              <button onClick={handleDrawerClose}>
+                <FontAwesomeIcon icon={faTimes} size="lg" />
+              </button>
             </div>
             <div className="flex flex-col">
               {Pages.map((data, index) => (
