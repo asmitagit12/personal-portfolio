@@ -150,7 +150,7 @@ const Header = () => {
                   >
                     <Link to={data.path} onClick={handleDrawerClose}>
                       <span className={`text-md font-medium ${
-                        location.pathname === data.path ? 'text-white' : 'text-gray-400'
+                        location.pathname === data.path ? 'text-black' : 'text-gray-400'
                       }`}>
                         {data.name}
                       </span>
