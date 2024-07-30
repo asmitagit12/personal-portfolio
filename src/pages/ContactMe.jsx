@@ -1,39 +1,53 @@
-import React from 'react'
-
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF, faTwitter, faLinkedinIn, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 const ContactMe = () => {
   return (
-    <div className="bg-[#141414] text-white min-h-screen p-8 flex items-center justify-center">
-        <div className="container mx-auto max-w-2xl bg-gray-800 p-8 rounded-lg shadow-2xl">
-          <h2 className="text-4xl font-bold mb-8 text-center">Contact Me</h2>
-          <div className="space-y-8">
-            <div className="flex items-center space-x-6 p-4 bg-gray-700 rounded-lg shadow-lg hover:bg-gray-600 transition duration-300">
-              <FontAwesomeIcon icon={faEnvelope} size="2x" className="text-blue-500" />
-              <div>
-                <h3 className="text-xl font-semibold">Email</h3>
-                <p className="text-gray-400">asmitapatil9904@gmail.com</p>
-              </div>
+    <div className="bg-[#141414] text-white py-16">
+      <div className="container mx-auto max-w-4xl bg-gray-800 p-8 rounded-lg shadow-2xl text-center">
+        <h2 className="text-4xl font-bold mb-8">Contact Me</h2>
+        <div className="flex flex-col items-center space-y-8">
+          <div className="flex space-x-8">
+            <div className="flex items-center space-x-2 p-4 bg-gray-700 rounded-lg shadow-lg">
+              <FontAwesomeIcon icon={faEnvelope} size="lg" className="text-white" />
+              <p className="text-white">asmitapatil9904@gmail.com</p>
             </div>
-            <div className="flex items-center space-x-6 p-4 bg-gray-700 rounded-lg shadow-lg hover:bg-gray-600 transition duration-300">
-              <FontAwesomeIcon icon={faPhone} size="2x" className="text-green-500" />
-              <div>
-                <h3 className="text-xl font-semibold">Mobile</h3>
-                <p className="text-gray-400">+91 9823400414</p>
-              </div>
+            <div className="flex items-center space-x-2 p-4 bg-gray-700 rounded-lg shadow-lg">
+              <FontAwesomeIcon icon={faPhone} size="lg" className="text-white" />
+              <p className="text-white">+91 9823400414</p>
             </div>
-            <div className="flex items-center space-x-6 p-4 bg-gray-700 rounded-lg shadow-lg hover:bg-gray-600 transition duration-300">
-              <FontAwesomeIcon icon={faMapMarkerAlt} size="2x" className="text-red-500" />
-              <div>
-                <h3 className="text-xl font-semibold">Address</h3>
-                <p className="text-gray-400">Kolhapur, Maharashtra</p>
-              </div>
-            </div>
+          </div>
+          <div className="flex items-center space-x-4 p-4 bg-gray-700 rounded-lg shadow-lg">
+            <FontAwesomeIcon icon={faMapMarkerAlt} size="lg" className="text-white" />
+            <p className="text-white">Kolhapur, Maharashtra</p>
+          </div>
+          <div className="flex justify-center space-x-4 mt-8">
+            <a href="#" className="text-white hover:text-gray-400 transition duration-300">
+              <FontAwesomeIcon icon={faFacebookF} size="lg" />
+            </a>
+            <a href="#" className="text-white hover:text-gray-400 transition duration-300">
+              <FontAwesomeIcon icon={faTwitter} size="lg" />
+            </a>
+            <a href="#" className="text-white hover:text-gray-400 transition duration-300">
+              <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
+            </a>
+            <a href="#" className="text-white hover:text-gray-400 transition duration-300">
+              <FontAwesomeIcon icon={faWhatsapp} size="lg" />
+            </a>
           </div>
         </div>
       </div>
-  )
+      <div className="text-center mt-16 text-yellow-500 font-bold">
+        <p className=" text-4xl">"Thanks for Watching!"</p>
+        <p className="mt-2 text-gray-200">Have a project in mind?</p>
+        <p className="mt-1 text-gray-200">Contact me</p>
+        <p className="mt-1 text-gray-200">asmitapatil9904@gmail.com</p>
+      </div>
+   
+    </div>
+  );
 }
 
-export default ContactMe
+export default ContactMe;

@@ -119,7 +119,7 @@ const Header = () => {
               <Link
                 to={data.path}
                 className={`text-md font-medium ml-2 ${
-                  highlightedItem === data.id ? 'text-white' : 'text-gray-400'
+                  location.pathname === data.path ? 'text-white' : 'text-gray-400'
                 }`}
                 onMouseEnter={data.id === 'services' ? handleSubMenuOpen : null}
               >
@@ -149,7 +149,11 @@ const Header = () => {
                     className="flex justify-between w-full px-4 py-2 text-left"
                   >
                     <Link to={data.path} onClick={handleDrawerClose}>
-                      {data.name}
+                      <span className={`text-md font-medium ${
+                        location.pathname === data.path ? 'text-white' : 'text-gray-400'
+                      }`}>
+                        {data.name}
+                      </span>
                     </Link>
                     {data.submenu.length > 0 && (
                       <span>{subMenuOpen[index] ? '-' : '+'}</span>

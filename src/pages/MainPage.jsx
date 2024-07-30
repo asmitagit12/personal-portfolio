@@ -1,8 +1,10 @@
 import React from 'react';
 import myImg from '../assets/profile-img.jpeg';
 import resumeFile from '../assets/resume.pdf'; // Make sure this path is correct based on where you place the resume
+import { useNavigate } from 'react-router-dom';
 
 const MainPage = () => {
+  const navigate = useNavigate()
   const handleResumeClick = () => {
     window.open(resumeFile);
   };
@@ -17,16 +19,20 @@ const MainPage = () => {
           </div>
           <p className="mb-5 mt-5 text-white text-xl md:text-3xl lg:text-2xl animate-fadeInLeft delay-500">FRONTEND DEVELOPER & WEB DESIGNER</p>
           <div className="flex flex-col lg:flex-row gap-5 mb-5 animate-fadeInUp delay-1000">
-            <button 
-              className="border bg-blue-500 text-white font-bold capitalize hover:bg-violet-600 py-2 px-3 lg:py-2 lg:px-4 rounded-2xl mb-2 lg:mb-0 transition-transform transform hover:scale-105"
+            <button
+              className="border bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold capitalize py-2 px-3 lg:py-2 lg:px-4 rounded-2xl mb-2 lg:mb-0 transition-transform transform hover:scale-105 shadow-lg hover:shadow-xl"
               onClick={handleResumeClick}
             >
               Resume
             </button>
-            <button className="border rounded-2xl py-2 px-3 lg:py-2 lg:px-4 text-white capitalize transition-transform transform hover:scale-105">
+            <button
+            onClick={()=>{navigate('/projects')}}
+              className="border bg-gradient-to-r from-gray-500 to-gray-700 text-white capitalize py-2 px-3 lg:py-2 lg:px-4 rounded-2xl transition-transform transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
               Projects
             </button>
           </div>
+
         </div>
       </div>
       <div className="lg:col-span-6 h-screen flex justify-center lg:justify-center">
