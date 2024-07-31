@@ -9,7 +9,7 @@ const ContactMe = () => {
       <div className="container mx-auto max-w-4xl bg-gray-800 p-8 rounded-lg shadow-2xl text-center">
         <h2 className="text-4xl font-bold mb-8">Contact Me</h2>
         <div className="flex flex-col items-center space-y-8">
-          <div className="flex space-x-8">
+          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
             <div className="flex items-center space-x-2 p-4 bg-gray-700 rounded-lg shadow-lg">
               <FontAwesomeIcon icon={faEnvelope} size="lg" className="text-white" />
               <p className="text-white">asmitapatil9904@gmail.com</p>
@@ -19,7 +19,7 @@ const ContactMe = () => {
               <p className="text-white">+91 9823400414</p>
             </div>
           </div>
-          <div className="flex items-center space-x-4 p-4 bg-gray-700 rounded-lg shadow-lg">
+          <div className="flex items-center space-x-2 p-4 bg-gray-700 rounded-lg shadow-lg">
             <FontAwesomeIcon icon={faMapMarkerAlt} size="lg" className="text-white" />
             <p className="text-white">Kolhapur, Maharashtra</p>
           </div>
@@ -40,12 +40,11 @@ const ContactMe = () => {
         </div>
       </div>
       <div className="text-center mt-16 text-yellow-500 font-bold">
-        <p className=" text-4xl">"Thanks for Watching!"</p>
+        <p className="text-2xl sm:text-4xl">"Thanks for Watching!"</p>
         <p className="mt-2 text-gray-200">Have a project in mind?</p>
         <p className="mt-1 text-gray-200">Contact me</p>
         <p className="mt-1 text-gray-200">asmitapatil9904@gmail.com</p>
       </div>
-   
     </div>
   );
 }
