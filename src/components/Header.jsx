@@ -106,8 +106,12 @@ const Header = () => {
 
   return (
     <>
-      <div className="fixed w-full bg-[#141414] z-20 h-14 flex items-center justify-between px-4">
-        <h1 className="text-white font-bold text-2xl">Asmita Patil</h1>
+      <div className="fixed w-full bg-[#141414] z-30 h-14 flex items-center justify-between px-4">
+        <div className='flex space-x-2'>
+          <h1 className="text-orange-500 font-extrabold text-2xl">|</h1>
+          <h1 className="text-white font-bold text-2xl">Asmita Patil</h1>
+
+        </div>
         <div className="md:hidden">
           <button onClick={handleDrawerClose} className="text-white">
             {open ? <FontAwesomeIcon icon={faTimes} size="lg" /> : <FontAwesomeIcon icon={faBars} size="lg" />}
@@ -115,16 +119,48 @@ const Header = () => {
         </div>
         <div className="hidden md:flex space-x-4">
           {Pages.map((data, index) => (
-            <div key={index} className="relative group">
+            <div key={index} className="relative group space-x-4">
               <Link
                 to={data.path}
-                className={`text-md font-medium ml-2 ${
-                  location.pathname === data.path ? 'text-white' : 'text-gray-400'
-                }`}
-                onMouseEnter={data.id === 'services' ? handleSubMenuOpen : null}
+                style={{
+                  position: 'relative',
+                  display: 'inline-block',
+                  color: location.pathname === data.path ? 'white' : '#9CA3AF', // Adjust active/inactive colors
+                  textDecoration: 'none', fontSize: 19, marginRight: 20
+                }}
+                onMouseEnter={(e) => {
+                  const target = e.currentTarget;
+                  const underline = target.querySelector('.underline');
+                  if (location.pathname !== data.path) {
+                    underline.style.width = '100%';
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  const target = e.currentTarget;
+                  const underline = target.querySelector('.underline');
+                  if (location.pathname !== data.path) {
+                    underline.style.width = '0';
+                  }
+                }}
               >
                 {data.name}
+                <span
+                  className="underline"
+                  style={{
+                    content: "''",
+                    position: 'absolute',
+                    bottom: 0,
+                    left: 0,
+                    // width: 0,
+                    marginTop: 1,
+                    width: location.pathname === data.path ? '100%' : '0', // Keep underline for active link
+                    height: '3px', // Thickness of the underline
+                    backgroundColor: 'orange', // Color of the underline
+                    transition: 'width 0.3s ease-in-out', // Animation
+                  }}
+                ></span>
               </Link>
+
             </div>
           ))}
         </div>
@@ -149,9 +185,8 @@ const Header = () => {
                     className="flex justify-between w-full px-4 py-2 text-left"
                   >
                     <Link to={data.path} onClick={handleDrawerClose}>
-                      <span className={`text-md font-medium ${
-                        location.pathname === data.path ? 'text-black' : 'text-gray-400'
-                      }`}>
+                      <span className={`text-md font-medium ${location.pathname === data.path ? 'text-black' : 'text-gray-400'
+                        }`}>
                         {data.name}
                       </span>
                     </Link>

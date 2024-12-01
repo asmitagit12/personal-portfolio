@@ -10,7 +10,7 @@ const Experience = () => {
           <time className="mb-1 text-xs md:text-sm font-normal leading-none text-gray-400 dark:text-gray-500">February 2024</time>
           <h3 className="text-base md:text-lg font-semibold  text-white">Suyotech Engineering Solutions Pv. Ltd. Kolhapur</h3>
           <h3 className="text-base md:text-lg font-semibold  text-gray-300">Job Role : Frontend Developer</h3>
-          <p className="text-sm md:text-base font-normal text-gray-500 dark:text-gray-400 w-full md:w-[1200px]">Currently, I am working on developing and maintaining web applications using React and Material UI, ensuring high-quality user interfaces and exceptional user experiences. I am also focused on building trading apps and algorithmic trading systems, creating intuitive and performant interfaces for traders, as well as developing websites with a focus on responsive design and accessibility.</p>
+          <p className="text-sm md:text-base font-normal text-gray-500 dark:text-gray-400 w-full md:w-[1200px]">Currently, I am working on developing and maintaining web applications using React and Material UI, ensuring high-quality user interfaces and exceptional user experiences.</p>
           <p className="text-sm md:text-base font-normal text-gray-500 dark:text-gray-400 mt-5">I am also focused on building trading apps and algorithmic trading systems, creating intuitive and performant interfaces for traders, as well as developing websites with a focus on responsive design and accessibility.</p>
         </li>
         <li className="mb-10 ms-4">

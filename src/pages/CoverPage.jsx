@@ -14,6 +14,11 @@ const CoverPage = () => {
                             <p className="text-4xl font-semibold">Asmita Patil</p>
                         </div>
                         <p className="mb-[30px] text-base">FRONTEND DEVELOPER & WEB DESIGNER</p>
+                        <p className='text-slate-100'>
+                            I specialize in building beautiful, responsive, and user-friendly web applications. With expertise in HTML, CSS, JavaScript, and modern frameworks like React, I love turning ideas into reality through creative and functional designs.
+                            I’m passionate about delivering seamless user experiences and constantly strive to learn, innovate, and bring value through my work.
+                            Let’s create something amazing together!
+                        </p>
                         <div className="flex gap-5 mb-[30px]">
                             <button className="border bg-blue-500 text-white font-bold  hover:bg-violet-600 px-6 rounded-2xl">RESUME</button>
                             <button className="border px-6 rounded-2xl py-2 p-0">PROJECTS</button>

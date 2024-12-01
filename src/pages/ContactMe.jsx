@@ -40,7 +40,11 @@ const ContactMe = () => {
         </div>
       </div>
       <div className="text-center mt-16 text-yellow-500 font-bold">
-        <p className="text-2xl sm:text-4xl">"Thanks for Watching!"</p>
+        {/* <p className="text-2xl sm:text-4xl">"Thanks for Watching!"</p> */}
+        {/* <TypingAnimation
+      className="text-4xl font-bold text-black dark:text-white"
+      text="Typing Animation"
+    /> */}
         <p className="mt-2 text-gray-200">Have a project in mind?</p>
         <p className="mt-1 text-gray-200">Contact me</p>
         <p className="mt-1 text-gray-200">asmitapatil9904@gmail.com</p>
