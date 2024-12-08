@@ -109,7 +109,7 @@ const Header = () => {
       <div className="fixed w-full bg-[#141414] z-30 h-14 flex items-center justify-between px-4">
         <div className='flex space-x-2'>
           <h1 className="text-orange-500 font-extrabold text-2xl">|</h1>
-          <h1 className="text-white font-bold text-2xl">Asmita Patil</h1>
+          <h1 className="text-white font-bold text-xl">Asmita Patil</h1>
 
         </div>
         <div className="md:hidden">
@@ -126,7 +126,7 @@ const Header = () => {
                   position: 'relative',
                   display: 'inline-block',
                   color: location.pathname === data.path ? 'white' : '#9CA3AF', // Adjust active/inactive colors
-                  textDecoration: 'none', fontSize: 19, marginRight: 20
+                  textDecoration: 'none', fontSize: 16, marginRight: 20
                 }}
                 onMouseEnter={(e) => {
                   const target = e.currentTarget;
