@@ -14,16 +14,6 @@ const experienceDetails = [
   },
   {
     id: 2,
-    company: "PHN Technology Pvt Ltd, Pune",
-    role: "Web Developer Intern",
-    startDate: "06-04-2023",
-    endDate: "06-06-2023",
-    description: [
-      "Working as a frontend developer, developed and maintained web applications using React and Material UI, ensuring high-quality user interfaces and exceptional user experiences.",
-    ],
-  },
-  {
-    id: 3,
     company: "Akron Systems, Kolhapur",
     role: "Frontend Developer Intern",
     startDate: "05-06-2023",
@@ -33,6 +23,17 @@ const experienceDetails = [
       "Utilized modern web development tools and frameworks to enhance project efficiency and maintain code quality.",
     ],
   },
+  {
+    id: 3,
+    company: "PHN Technology Pvt Ltd, Pune",
+    role: "Web Developer Intern",
+    startDate: "06-04-2023",
+    endDate: "06-06-2023",
+    description: [
+      "Working as a frontend developer, developed and maintained web applications using React and Material UI, ensuring high-quality user interfaces and exceptional user experiences.",
+    ],
+  },
+  
 ];
 
 const Experience = () => {
