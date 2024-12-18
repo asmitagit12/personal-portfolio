@@ -5,6 +5,11 @@ import rect3 from '../assets/images/rect-3.svg'
 import rect4 from '../assets/images/rect-4.svg'
 import rect5 from '../assets/images/rect-5.svg'
 import rect6 from '../assets/images/rect-6.svg'
+import portfolioProject from '../assets/projects-img/portfolio-img.png'
+import eshop from '../assets/projects-img/eshop.png'
+import mgt from '../assets/projects-img/mgt.png'
+import dragonfly from '../assets/projects-img/dragonfly.png'
+import clothing from '../assets/projects-img/clothing.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt, faCode } from "@fortawesome/free-solid-svg-icons";
 
@@ -16,15 +21,15 @@ const Projects = () => {
       technologies: ["React", "Tailwind CSS", "JavaScript"],
       linkPreview: "https://asmita-patil.web.app/",
       linkCode: "#",
-      image: rect1,
+      image: portfolioProject,
     },
     {
       title: "E-commerce Platform",
       description: "A full-fledged e-commerce platform with a user-friendly interface.",
       technologies: ["React", "Next JS", "Tailwind CSS"],
-      linkPreview: "#",
+      linkPreview: "https://codesandbox.io/p/devbox/github/asmitagit12/e-commerce-app/tree/develop-1",
       linkCode: "#",
-      image: rect2,
+      image: eshop,
     },
     {
       title: "Trading App",
@@ -38,17 +43,17 @@ const Projects = () => {
       title: "Online Clothing Store",
       description: "An e-commerce platform for browsing and purchasing clothes online.",
       technologies: ["React", "Node.js", "Material UI"],
-      linkPreview: "#",
+      linkPreview: "https://codesandbox.io/p/devbox/github/asmitagit12/online-clothing-store/tree/develop-1",
       linkCode: "#",
-      image: rect4,
+      image: clothing,
     },
     {
       title: "Employee Management System",
       description: "A system for managing employees, roles, and attendance with an intuitive interface.",
       technologies: ["Next.js", "Node.js", "MongoDB", "ShadCN UI"],
-      linkPreview: "#",
+      linkPreview: "https://codesandbox.io/p/devbox/github/asmitagit12/employee-management/tree/test",
       linkCode: "#",
-      image: rect3,
+      image: mgt,
     },
     {
       title: "Redux CRUD Application",
@@ -62,7 +67,7 @@ const Projects = () => {
       title: "Movie Booking Application",
       description: "A platform for browsing movies, booking tickets, and managing reservations with a user-friendly interface.",
       technologies: ["React", "Redux", "MongoDB", "Material UI"],
-      linkPreview: "#",
+      linkPreview: "https://codesandbox.io/p/sandbox/github/asmitagit12/movie-booking-app/tree/develop-1",
       linkCode: "#",
       image: rect1,
     },
@@ -70,9 +75,9 @@ const Projects = () => {
       title: "Dragon Fly Game",
       description: "An interactive 2D game where players control a dragon to dodge obstacles and score points.",
       technologies: ["HTML", "CSS", "JavaScript"],
-      linkPreview: "#",
+      linkPreview: "https://codesandbox.io/p/sandbox/github/asmitagit12/diano-dragon-game/tree/develop-1",
       linkCode: "#",
-      image: rect2,
+      image: dragonfly,
     },
 
 
