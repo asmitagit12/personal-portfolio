@@ -27,7 +27,7 @@ const Projects = () => {
       title: "E-commerce Platform",
       description: "A full-fledged e-commerce platform with a user-friendly interface.",
       technologies: ["React", "Next JS", "Tailwind CSS"],
-      linkPreview: "#",
+      linkPreview: "https://dwgnf5-3000.csb.app/",
       linkCode: "#",
       image: eshop,
     },
@@ -35,7 +35,7 @@ const Projects = () => {
       title: "Trading App",
       description: "A trading application with real-time data and algorithmic trading features.",
       technologies: ["React", "Node.js", "Material UI"],
-      linkPreview: "#",
+      linkPreview: "",
       linkCode: "#",
       image: rect3,
     },
@@ -43,7 +43,7 @@ const Projects = () => {
       title: "Online Clothing Store",
       description: "An e-commerce platform for browsing and purchasing clothes online.",
       technologies: ["React", "Node.js", "Material UI"],
-      linkPreview: "#",
+      linkPreview: "",
       linkCode: "#",
       image: clothing,
     },
@@ -51,7 +51,7 @@ const Projects = () => {
       title: "Employee Management System",
       description: "A system for managing employees, roles, and attendance with an intuitive interface.",
       technologies: ["Next.js", "Node.js", "MongoDB", "ShadCN UI"],
-      linkPreview: "#",
+      linkPreview: "https://pgp9z7-3000.csb.app",
       linkCode: "#",
       image: mgt,
     },
@@ -59,7 +59,7 @@ const Projects = () => {
       title: "Redux CRUD Application",
       description: "A web app showcasing Create, Read, Update, and Delete operations using Redux for state management.",
       technologies: ["React", "Redux", "Node.js", "Material UI"],
-      linkPreview: "#",
+      linkPreview: "",
       linkCode: "#",
       image: rect6,
     },
@@ -67,7 +67,7 @@ const Projects = () => {
       title: "Movie Booking Application",
       description: "A platform for browsing movies, booking tickets, and managing reservations with a user-friendly interface.",
       technologies: ["React", "Redux", "MongoDB", "Material UI"],
-      linkPreview: "#",
+      linkPreview: "https://ckc55n.csb.app/",
       linkCode: "#",
       image: rect1,
     },
@@ -75,7 +75,7 @@ const Projects = () => {
       title: "Dragon Fly Game",
       description: "An interactive 2D game where players control a dragon to dodge obstacles and score points.",
       technologies: ["HTML", "CSS", "JavaScript"],
-      linkPreview: "#",
+      linkPreview: "https://myg6p6.csb.app/",
       linkCode: "#",
       image: dragonfly,
     },
@@ -124,13 +124,14 @@ const Projects = () => {
               </div>
               <div className="p-4 border-t border-gray-700 flex justify-between items-center">
                 <a
-                  href={project.linkPreview}
-                  target='_blank'
+                  href={project.linkPreview || '#'}
+                  target={project.linkPreview ? '_blank' : '_self'}
                   className="text-orange-400 hover:underline flex items-center gap-2 text-xs"
                 >
                   <FontAwesomeIcon icon={faExternalLinkAlt} />
                   Live Preview
                 </a>
+
                 <a
                   href={project.linkCode}
                   className="text-orange-400 hover:underline flex items-center gap-2 text-xs"
