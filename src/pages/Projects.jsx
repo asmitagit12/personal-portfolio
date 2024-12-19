@@ -27,7 +27,7 @@ const Projects = () => {
       title: "E-commerce Platform",
       description: "A full-fledged e-commerce platform with a user-friendly interface.",
       technologies: ["React", "Next JS", "Tailwind CSS"],
-      linkPreview: "https://codesandbox.io/p/devbox/github/asmitagit12/e-commerce-app/tree/develop-1",
+      linkPreview: "#",
       linkCode: "#",
       image: eshop,
     },
@@ -43,7 +43,7 @@ const Projects = () => {
       title: "Online Clothing Store",
       description: "An e-commerce platform for browsing and purchasing clothes online.",
       technologies: ["React", "Node.js", "Material UI"],
-      linkPreview: "https://codesandbox.io/p/devbox/github/asmitagit12/online-clothing-store/tree/develop-1",
+      linkPreview: "#",
       linkCode: "#",
       image: clothing,
     },
@@ -51,7 +51,7 @@ const Projects = () => {
       title: "Employee Management System",
       description: "A system for managing employees, roles, and attendance with an intuitive interface.",
       technologies: ["Next.js", "Node.js", "MongoDB", "ShadCN UI"],
-      linkPreview: "https://codesandbox.io/p/devbox/github/asmitagit12/employee-management/tree/test",
+      linkPreview: "#",
       linkCode: "#",
       image: mgt,
     },
@@ -67,7 +67,7 @@ const Projects = () => {
       title: "Movie Booking Application",
       description: "A platform for browsing movies, booking tickets, and managing reservations with a user-friendly interface.",
       technologies: ["React", "Redux", "MongoDB", "Material UI"],
-      linkPreview: "https://codesandbox.io/p/sandbox/github/asmitagit12/movie-booking-app/tree/develop-1",
+      linkPreview: "#",
       linkCode: "#",
       image: rect1,
     },
@@ -75,14 +75,10 @@ const Projects = () => {
       title: "Dragon Fly Game",
       description: "An interactive 2D game where players control a dragon to dodge obstacles and score points.",
       technologies: ["HTML", "CSS", "JavaScript"],
-      linkPreview: "https://codesandbox.io/p/sandbox/github/asmitagit12/diano-dragon-game/tree/develop-1",
+      linkPreview: "#",
       linkCode: "#",
       image: dragonfly,
     },
-
-
-
-
   ];
 
   return (
